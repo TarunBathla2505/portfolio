@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../style";
 import { navLinks } from "../constants";
 import { tarun, menu, close } from "../assets";
+import CV from "../assets/CV.pdf";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -40,6 +41,14 @@ const Navbar = () => {
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
+          <li
+            key="resume"
+            className={`text-secondary hover:text-white text-[18px] font-medium cursor-pointer`}
+          >
+            <a download="Tarun's CV" href={CV}>
+              Resume
+            </a>
+          </li>
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
